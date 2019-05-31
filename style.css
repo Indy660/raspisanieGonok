@@ -1,0 +1,46 @@
+body {
+  text-align: center
+}
+
+caption {
+  caption-side: bottom;
+  text-align: right;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+/*нижняя надпись*/
+
+table {
+  border-collapse: collapse;
+  /*убираем пустые промежутки между ячейками*/
+  border: 10px solid green;
+}
+
+td {
+  border: 2px solid grey;
+}
+
+table {
+  width: 100%;
+}
+
+td:first-child {
+  width: 30%;
+}
+
+th,
+td {
+  padding: 10px 10px;
+}
+
+.downimg {
+  max-width: 100%;
+  float: down;
+  margin: 10px 0 7px 7px;
+}
+
+h4 {
+  color: #669;
+  background: #b9c9fe;
+}
