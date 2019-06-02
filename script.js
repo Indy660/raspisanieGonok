@@ -1,24 +1,17 @@
 let dateMonaco = new Date(2019, 4, 26, 16, 0)
 const dateMonacoHTML = document.getElementById('dateMonaco');
 dateMonacoHTML.innerHTML = "26 May 2019"
-setInterval(function() {
-  document.getElementById("Monaco left").textContent = timeLeft(dateMonaco);
-}, 500);
+timePrint("Monaco left", dateMonaco)
 
 let dateCanada = new Date(2019, 5, 9, 15, 15)
 const dateCanadaHTML = document.getElementById('dateCanada');
 dateCanadaHTML.innerHTML = "9 June 2019"
-setInterval(function() {
-  document.getElementById("Canada left").textContent = timeLeft(dateCanada);
-}, 500);
+timePrint("Canada left", dateCanada)
 
 let dateFrance = new Date(2019, 6, 23, 15, 0)
 const dateFranceHTML = document.getElementById('dateFrance');
 dateFranceHTML.innerHTML = "23 Jule 2019"
-setInterval(function() {
-  document.getElementById("France left").textContent = timeLeft(dateFrance);
-}, 500);
-
+timePrint("France left", dateFrance)
 
 let dateToday = new Date();
 let day = dateToday.getDate();
@@ -49,4 +42,10 @@ function checkTime(i) {
     i = "0" + i
   }
   return i;
+}
+
+function timePrint(raceleft, timeRace) {
+return setInterval(function() {
+  document.getElementById(raceleft).textContent = timeLeft(timeRace);
+}, 500);
 }
