@@ -1,17 +1,17 @@
 let dateMonaco = new Date(2019, 4, 26, 16, 0)
 const dateMonacoHTML = document.getElementById('dateMonaco');
 dateMonacoHTML.innerHTML = "26 May 2019"
-timePrint("Monaco left", dateMonaco)
+timePrint("Monacoleft", dateMonaco)
 
 let dateCanada = new Date(2019, 5, 9, 15, 15)
 const dateCanadaHTML = document.getElementById('dateCanada');
 dateCanadaHTML.innerHTML = "9 June 2019"
-timePrint("Canada left", dateCanada)
+timePrint("Canadaleft", dateCanada)
 
 let dateFrance = new Date(2019, 6, 23, 15, 0)
 const dateFranceHTML = document.getElementById('dateFrance');
 dateFranceHTML.innerHTML = "23 Jule 2019"
-timePrint("France left", dateFrance)
+timePrint("Franceleft", dateFrance)
 
 let dateToday = new Date();
 let day = dateToday.getDate();
