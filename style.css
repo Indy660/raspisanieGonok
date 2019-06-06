@@ -1,46 +1,59 @@
 body {
-  text-align: center
+    text-align: center
 }
 
 caption {
-  caption-side: bottom;
-  text-align: right;
-  padding: 10px 0;
-  font-size: 20px;
+    caption-side: top;
+    text-align: right;
+    padding: 10px 0;
+    font-size: 200%;
 }
-
 /*нижняя надпись*/
 
+select {
+    right: 10%;
+    padding: 0.25% 0;
+    font-size: 100%;
+}
+
+
+.main_section {
+    text-shadow: 5px 5px 10px #a7aab4;
+}
+
+#header {
+    text-shadow: 5px 5px 10px #a7aab4;
+}
+
 table {
-  border-collapse: collapse;
-  /*убираем пустые промежутки между ячейками*/
-  border: 10px solid green;
+    border-collapse: collapse;
+    /*убираем пустые промежутки между ячейками*/
+    border: 10px solid #c2ffe5;
+}
+
+.tableBestTimes {
+    border-collapse: collapse;
+    border: 2px solid mediumvioletred;
 }
 
 td {
-  border: 2px solid grey;
+    border: 2px solid mediumvioletred;
 }
 
 table {
-  width: 100%;
+    width: 100%;
 }
 
 td:first-child {
-  width: 30%;
-}
-
-th,
-td {
-  padding: 10px 10px;
+    width: 30%;
 }
 
 .downimg {
-  max-width: 100%;
-  float: down;
-  margin: 10px 0 7px 7px;
+    max-width: 100%;
+    float: down;
 }
 
-h4 {
-  color: #669;
-  background: #b9c9fe;
+h3 {
+    color: #1100ff;
+    background: #b9c9fe;
 }
