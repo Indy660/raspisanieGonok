@@ -1,66 +1,130 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-   
+
     <title>Расписание гонок</title>
-  </head>
+</head>
 
-  <body>
-    <div id="header">
-      <h1>Расписание гонок</h1>
-      <p id="dateToday">Текущее дата:</p>
-    </div>
+<body>
+<div id="header">
+    <h1>Расписание гонок</h1>
+    <h2><p id="dateToday">Текущая дата:</p></h2>
+</div>
+
+
+    
+        <select>
+            <option value="white">Белый</option>
+            <option value="#7274CF">Синий</option>
+            <option value="#83EC8F">Зеленый</option>
+            <option value="#BC4D49">Красный</option>
+        </select>
+        <input type="button" id="input_button_bg_change" value="Изменение цвета фона"/>
+        <input type="button" id="epilepsia" value="Режим вечеринка"/>
 
 
 
-    <div class="main_section">
-      <table>
-        <caption>2019</caption>
+
+<div class="main_section">
+    <table>
+         <caption id="calendar">Календарь на 2019 год</caption>
         <tr>
-          <td>Трасса</td>
-          <td>Дата гонки</td>
-          <td>Осталось времени</td>
+            <td> <h2>Трасса</h2></td>
+            <td> <h2>Круг по трассе</h2></td>
+            <td><h2>Дата гонки</h2></td>
+            <td><h2>Осталось времени</h2></td>
         </tr>
 
+</div>
 
         <tr>
-          <td>
-            <h4>
-              Монако </h4>
-            <hr>
-            <img src="https://cdn-1.motorsport.com/images/amp/6zlBV3a2/s6/f1-monaco-gp-2018-the-start-of-the-race-8482499.jpg" class="downimg">
-            <br>
-            <hr>Лучшее время круга: <br>1:11:59</td>
-          <td id="dateMonaco"></td>
-          <td id="Monacoleft"></td>
+            <td>
+
+                <h3>
+                    Монако </h3>
+
+                <img src="https://cdn-1.motorsport.com/images/amp/6zlBV3a2/s6/f1-monaco-gp-2018-the-start-of-the-race-8482499.jpg" class="downimg">
+
+
+
+                <table class="tableBestTimes">
+                    <tr>
+                        <td rowspan="2">Лучшее время круга: <br>1:10.166</td>
+                        <td colspan="2"><img src="https://wildsoft.motorsport.com/img/cha/mod/Mercedes%20F1%20W10%20EQ%20Power+.gif"></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>Мерседес</td>
+                        <td>Год: 2019</td>
+                    </tr>
+                </table>
+
+
+            </td>
+
+            <td> <iframe width="700" height="500" src="https://www.youtube.com/embed/IlCmSMWxaEE" frameborder="0" allowfullscreen></iframe></td>
+            <td id="dateMonaco"></td>
+            <td id="Monacoleft"></td>
+
         </tr>
         <tr>
-          <td>
-            <h4>
-              Канада </h4>
-            <hr>
-            <img src="https://www.formulaf1.es/wp-content/uploads/2010/06/0start2_mont_2010.jpg" class="downimg">
-            <br>
-            <hr>Лучшее время круга: <br>1:20:12 </td>
-          <td id="dateCanada"></td>
-          <td id="Canadaleft"></td>
+            <td>
+                <h3>
+                    Канада </h3>
+
+                <img src="https://www.formulaf1.es/wp-content/uploads/2010/06/0start2_mont_2010.jpg" class="downimg">
+
+
+                <table class="tableBestTimes">
+                    <tr>
+                        <td rowspan="2">Лучшее время круга: <br>1:12,275</td>
+                        <td colspan="2"><img src="https://wildsoft.motorsport.com/img/cha/mod/Williams%20FW26.gif"></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>Вильямс</td>
+                        <td>Год: 2004</td>
+                    </tr>
+                </table>
+
+            </td>
+            <td> <iframe width="700" height="500" src="https://www.youtube.com/embed/BdSwtdyc7Z0" frameborder="0" allowfullscreen></iframe></td>
+            <td id="dateCanada"></td>
+            <td id="Canadaleft"></td>
         </tr>
         <tr>
-          <td>
-            <h4>
-              Франция </h4>
-            <hr>
-            <img src="https://www.grandprix247.com/wp-content/uploads/2017/09/paul-ricard-1990-french-gp-f1_27255631.jpg" class="downimg">
-            <br>
-            <hr>Лучшее время круга: <br>1:38:46</td>
-          <td id="dateFrance"></td>
-          <td id="Franceleft"></td>
+            <td>
+                <h3>
+                    Франция </h3>
+
+                <img src="https://www.grandprix247.com/wp-content/uploads/2017/09/paul-ricard-1990-french-gp-f1_27255631.jpg" class="downimg">
+
+
+                <table class="tableBestTimes">
+                    <tr>
+                        <td rowspan="2">Лучшее время круга: <br>1:30,029</td>
+                        <td colspan="2"><img src="https://wildsoft.motorsport.com/img/cha/mod/Mercedes%20F1%20W09%20EQ%20Power+.gif"></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>Мерседес</td>
+                        <td>Год: 2018</td>
+                    </tr>
+                </table>
+
+            </td>
+            <td>  <iframe width="700" height="500" src="https://www.youtube.com/embed/Wk0_tpMEHg0" frameborder="0" allowfullscreen></iframe></td>
+            <td id="dateFrance"></td>
+            <td id="Franceleft"></td>
         </tr>
 
-      </table>
-    </div>
- <script src="script.js"> </script>
+    </table>
+
+<script src="script.js"> </script>
 </body>
