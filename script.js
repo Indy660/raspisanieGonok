@@ -8,25 +8,38 @@ const dateCanadaHTML = document.getElementById('dateCanada');
 dateCanadaHTML.innerHTML = "9 июня 2019"
 timePrint("Canadaleft", dateCanada)
 
-let dateFrance = new Date(2019, 6, 23, 15, 0)
+let dateFrance = new Date(2019, 5, 23, 15, 0)
 const dateFranceHTML = document.getElementById('dateFrance');
 dateFranceHTML.innerHTML = "23 июня 2019"
 timePrint("Franceleft", dateFrance)
 
+let dateAustria = new Date(2019, 5, 30, 16, 0)
+const dateAustriaHTML = document.getElementById('dateAustria');
+dateAustriaHTML.innerHTML = "30 июня 2019"
+timePrint("Austrialeft", dateAustria)
+
 let dateToday = new Date();
 let day = dateToday.getDate();
-let month = dateToday.getMonth() + 1;
+let mounth = dateToday.getMonth() + 1;
 let year = dateToday.getFullYear();
 day=checkTime(day)
-month=checkTime(month)
+mounth=checkTime(mounth)
 const dateTodayHTML = document.getElementById('dateToday');
-dateTodayHTML.innerHTML +=" " + day + '.' + month + '.' + year
+dateTodayHTML.innerHTML +=" " + day + '.' + mounth + '.' + year
 
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i
+    }
+    return i;
+}
 
 function timeLeft(timeRace) {
     let dateToday = new Date();
     if (dateToday > timeRace) {
-        return "Гонка уже прошла"
+
+        return "Гонка прошла \n" + Math.floor((dateToday.getTime() - timeRace.getTime()) / (1000 * 3600 * 24))+" дней назад"
+
     } else {
         let daysLag = Math.floor((timeRace.getTime() - dateToday.getTime()) / (1000 * 3600 * 24));
         let hoursLag = Math.floor((timeRace.getTime() - dateToday.getTime()) / (1000 * 3600) - daysLag * 24);
@@ -39,24 +52,41 @@ function timeLeft(timeRace) {
     }
 }
 
-function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i
-    }
-    return i;
-}
-
 function timePrint(raceleft, timeRace) {
     return setInterval(function() {
         document.getElementById(raceleft).textContent = timeLeft(timeRace);
     }, 500);
 }
 
-let p = document.getElementById('calendar');
-window.setInterval(changeColors, 50);  //cмена цвета на 15 каждые полсекунды
 
+const button = document.getElementById('input_button_bg_change');
+const option = document.getElementsByTagName('select')[0];
+const body = document.getElementsByTagName('body')[0];
+button.onclick = function() {
+    body.style.backgroundColor = option.value  //выбор фона
+};
+
+
+function changeColors(element, colorRule, initialHue, timeout) {
+    setInterval(() => element.style[colorRule]=`hsl(${++initialHue%360},100%,50%)`, timeout)
+}
+
+let calendar = document.getElementById('calendar');
+let button2 = document.getElementById('epilepsia');
+changeColors(calendar, "color", 0, 20)     //смена цвета надписи
+button2.onclick = function() {
+    changeColors(body, "backgroundColor", 180, 70)
+};         //смена фона
+
+
+
+/*
+
+
+
+
+способ смены цвета, второй способ
 let colors = { r:255, g:0, b:0 };
-
 function changeColors() {
     const c = colors;
     if (     c.r == 255 && c.g != 255 && c.b == 0)   c.g += 15;
@@ -68,19 +98,4 @@ function changeColors() {
 
     return p.style.color = `rgb(${c.r}, ${c.g}, ${c.b})`;
 }
-
-
-const button = document.getElementById('input_button_bg_change');
-const option = document.getElementsByTagName('select')[0];
-const body = document.getElementsByTagName('body')[0];
-button.onclick = function() {
-    body.style.backgroundColor = option.value
-};
-
-const button2 = document.getElementById('epilepsia');
-button2.onclick = function() {
-    let i=0
-    setInterval(()=>body.style.backgroundColor=`hsl(${++i%360},100%,50%)`,1)
-};
-
-
+  */
