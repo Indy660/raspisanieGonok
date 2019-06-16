@@ -1,5 +1,8 @@
+
 body {
-    text-align: center
+    text-align: center;
+    font-family: sans-serif;
+
 }
 
 caption {
@@ -56,4 +59,8 @@ td:first-child {
 h3 {
     color: #1100ff;
     background: #b9c9fe;
+}
+
+#Canadaleft, #Franceleft, #Monacoleft{
+    white-space: pre-line
 }
