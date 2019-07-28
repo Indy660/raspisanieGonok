@@ -18,6 +18,11 @@ const dateAustriaHTML = document.getElementById('dateAustria');
 dateAustriaHTML.innerHTML = "30 июня 2019"
 timePrint("Austrialeft", dateAustria)
 
+let dateBuhunda = new Date(2032, 3, 27, 5, 45)
+const dateBuhundaHTML = document.getElementById('dateBuhunda');
+dateBuhundaHTML.innerHTML = "27 марта 2032"
+timePrint("Buhundaleft", dateBuhunda)
+
 let dateToday = new Date();
 let day = dateToday.getDate();
 let mounth = dateToday.getMonth() + 1;
